@@ -49,5 +49,5 @@ if __name__ == '__main__':
     in_data = sys.stdin.readline()
     n = int(in_data)
     summands = optimal_summands(n)
-    print(len(summands))
-    print(*summands, sep=' ')
+    print('Maximum number of prizes are {}'.format(len(summands)))
+    print('Number of candies distributed are (Last ----> First): ', *summands, sep=' ')

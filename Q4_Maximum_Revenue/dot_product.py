@@ -7,15 +7,13 @@ def multi(x):
 
 
 def max_dot_product(x, y):
-    #write your code here
+    # write your code here
     return sum((map(multi, zip(x, y))))
 
 
 if __name__ == '__main__':
-    input = sys.stdin.readline()
-    data = list(map(int, sys.stdin.readline().split()))
+    data = list(map(int, sys.stdin.read().split()))
     n = data[0]
     a = sorted(data[1:(n + 1)], reverse=True)
     b = sorted(data[(n + 1):], reverse=True)
-    print(max_dot_product(a, b))
-    
+    print('Maximum revenue is {}'.format(max_dot_product(a, b)))

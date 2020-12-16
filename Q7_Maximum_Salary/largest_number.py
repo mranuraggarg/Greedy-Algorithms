@@ -24,5 +24,4 @@ def largest_number(lst) -> str:
 if __name__ == '__main__':
     input_data = sys.stdin.readline()
     data = input_data.split()
-    a = data[1:]
-    print(largest_number(a))
+    print('The maximum possible salary is: {}'.format(largest_number(data)))
