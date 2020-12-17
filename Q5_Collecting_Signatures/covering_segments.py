@@ -1,6 +1,24 @@
 # Uses python3
-from sys import stdin
-from collections import namedtuple
+##################################################
+## For detail refer README.md in the main folder
+##################################################
+## GNU General Public License v3.0
+##################################################
+## Author: ANURAG GARG
+## Copyright: Copyright 2020, Greedy Algorithm
+
+## Credits: Kulikov, Alexander S.; Pevzner, Pavel.
+# Learning Algorithms Through Programming and Puzzle Solving.
+# Active Learning Technologies. Kindle Edition.
+
+## License: GNU GPL v3.0
+## Version: 1.1.0
+## Mmaintainer: ANURAG GARG
+## Email: mranuraggarg@yahoo.com
+## Status: stable
+####################################################################################################
+import sys
+from collections import namedtu
 
 Segment = namedtuple('Segment', 'start end')
 
@@ -25,7 +43,7 @@ def optimal_points(line):
 
 
 if __name__ == '__main__':
-    n, *data = map(int, stdin.read().split())
+    n, *data = map(int, sys.stdin.read().split())
     segments = list(map(lambda x: Segment(x[0], x[1]), zip(data[::2], data[1::2])))
     pnts = optimal_points(segments)
     print('Lanlord will have to visit {} time(s) to collect all the signatures'.format(len(pnts)))
